@@ -1,0 +1,40 @@
+<div>
+    
+    Product code: <input [(ngModel)] ="p.prodid" />
+    <br><br>
+    Product name: <input [(ngModel)] ="p.prodname" />
+    <br><br>
+    Rate: <input [(ngModel)] ="p.prodrate" />
+    <br><br>
+    Discount: <input [(ngModel)] ="p.prodiscount" />
+    <br><br>
+    <button (click) ="addprod()" > Add </button> &nbsp;&nbsp;&nbsp;&nbsp; <button (click) ="modifyprod()" > Modify </button>
+ 
+ 
+ </div>
+ <div>
+     <h2>All Products</h2>
+ <table border="1">
+     <thead>
+         <th>ID</th>
+         <th>Name</th>
+         <th>Rate</th>
+         <th>Discount</th>
+         <th>Dis_Amt</th>
+         <th>Final Amt</th>
+     </thead>
+     <tbody *ngFor='let prod of products ; let i=index'>
+ <tr >
+     
+     <td>{{prod.prodid}}</td>
+     <td>{{prod.prodname}}</td>
+     <td>{{prod.prodrate}}</td>
+     <td>{{prod.prodiscount}}</td>
+     <!-- <td>{{prod.rate | discount : prod.discount}}</td>
+     <td>{{ prod.rate - (prod.rate | discount : prod.discount)  }}</td>  -->
+     <td><button (click) = "delprod(i)">Delete</button></td> 
+     <td><button (click) = "updateprod(i)">Edit</button></td>
+ </tr>
+ 
+     </tbody>
+ </table>

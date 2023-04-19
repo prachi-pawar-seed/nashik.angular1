@@ -1,0 +1,22 @@
+
+
+<input [ngStyle]="{'color':col1}" [ngModel]="msg1" (input)="changed($event)">
+<br>
+{{msg1}}
+
+<br>
+
+<h2><span>Select a day:</span></h2>
+    <select (change)="selectChangeHandler($event)">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+    </select>
+
+    {{day}}
+
+    <hr>
+
+    Date: <input type="date"  [ngModel]="myDate|date:'yyyy-MM-dd'" >

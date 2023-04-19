@@ -1,0 +1,208 @@
+<h2>Employee List</h2>
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+     <tr *ngFor="let emp of employees">
+        <td>{{emp.code}}</td><td>{{emp.name}}</td><td>{{emp.salary}}</td>
+     </tr>
+    </tbody>
+</table>
+
+<hr>
+<h2>Employee List</h2>
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </thead>
+    <tbody *ngFor="let emp of employees" >
+     <tr  *ngIf="emp.salary > 9000">
+        <td>{{emp.code}}</td><td>{{emp.name}}</td><td>{{emp.salary}}</td>
+     </tr>
+    </tbody>
+</table>
+
+<!-- 
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Is First</th>
+        <th>Even index</th>
+        <th>Odd index</th>
+    </thead>
+    <tbody>
+     <tr *ngFor="let emp of employees;let i =index;let f=first;let iseven=even;let isodd=odd">
+        <td>{{i}}</td><td>{{emp.code}}</td><td>{{emp.name}}</td><td>{{emp.salary}}</td><td>{{f}}</td><td>{{iseven}}</td><td>{{isodd}}</td>
+     </tr>
+    </tbody>
+</table>
+
+<hr>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </thead>
+    <tbody *ngFor="let emp of employees">
+     <tr *ngIf="emp.salary>=9000">
+        <td>{{emp.code}}</td><td>{{emp.name}}</td><td>{{emp.salary}}</td>
+     </tr>
+    </tbody>
+</table> -->
+
+<!-- 
+<div>
+    <table>
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Gender</th>
+          <th>Birthdate</th>
+        </thead>
+        <tbody>
+           <tr *ngFor="let emp of employees;">
+              <td>{{emp.code}}</td>
+              <td>{{emp.name}}</td>
+              <td>{{emp.salary}}</td>
+              <td>{{emp.gender}}</td>
+              <td>{{emp.dob}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+<div>
+    <table>
+        <thead>
+            <th>Srno</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Gender</th>
+          <th>Birthdate</th>
+          <th>isfirst</th>
+          <th>iseven</th>
+          <th>isodd</th>
+        </thead>
+        <tbody>
+           <tr *ngFor="let emp of employees;let i=index;let isfirst=first;let iseven=even;let isodd=odd">
+              <td>{{i+1}}</td>
+              <td>{{emp.code}}</td>
+              <td>{{emp.name}}</td>
+              <td>{{emp.salary}}</td>
+              <td>{{emp.gender}}</td>
+              <td>{{emp.dob}}</td>
+              <td>{{isfirst}}</td>
+              <td>{{iseven}}</td>
+              <td>{{isodd}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<div>
+    <table>
+        <thead>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Gender</th>
+          <th>Birthdate</th>
+        </thead>
+        <tbody *ngFor="let emp of employees;">
+           <tr  *ngIf="emp.salary>9000">
+              <td>{{emp.code}}</td>
+              <td>{{emp.name}}</td>
+              <td>{{emp.salary}}</td>
+              <td>{{emp.gender}}</td>
+              <td>{{emp.dob}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>
+ -->
+
+
+
+<!-- <ul>
+<li *ngFor="let emp of employees">{{emp.name}}</li>
+
+</ul>> -->
+
+ 
+ <!-- <div>
+<table border="1">
+<thead>
+<th>Srno</th>
+<th>ID</th>
+<th>Name</th>
+<th>Salary</th>
+<th>Gender</th>
+<th>Birthdate</th>
+<th>Is First</th>
+<th>Is Even</th>
+<th>Is Odd</th> 
+</thead>
+
+<tbody *ngFor= 'let emp of employees; let i=index;let isfirst=first;let iseven=even;let isodd=odd' >
+<tr >
+    <td>{{i+1}}</td>
+    <td>{{emp.code}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.gender}}</td>
+    <td>{{emp.dob}}</td>
+    <td>{{isfirst}}</td>
+    <td>{{iseven}}</td>
+    <td>{{isodd}}</td>
+</tr>
+
+</tbody>
+</table>
+
+
+</div>  -->
+
+<!-- <div>
+<table border="1">
+<thead>
+<th>Srno</th>
+<th>ID</th>
+<th>Name</th>
+<th>Salary</th>
+<th>Gender</th>
+<th>Birthdate</th>
+<th>IsFirst</th>
+<th>IsEvent</th>
+<th>IsOdd</th>
+</thead>
+
+<tbody *ngFor='let emp of employees; let i=index; let isfirst=first;let iseven=even;let isodd=odd'>
+<tr *ngIf="emp.salary>9000" >
+    <td>{{i+1}}</td>
+    <td>{{emp.code}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.gender}}</td>
+    <td>{{emp.dob}}</td>
+    <td>{{isfirst}}</td>
+    <td>{{iseven}}</td>
+    <td>{{isodd}}</td>
+    
+</tr>
+</tbody>
+</table>
+
+</div> -->

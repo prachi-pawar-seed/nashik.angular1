@@ -1,0 +1,26 @@
+<h2>Age is {{age}}</h2>
+
+<div *ngIf="age>=18;then block1 else block2"></div>
+
+<ng-template #block1>
+    <h2>U can vote</h2>
+</ng-template>
+
+<ng-template #block2>
+    <h2>U cannot vote</h2>
+</ng-template>
+
+<div>
+<table border=1 align="center">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customers">
+          <td>{{c.custid}}</td><td>{{c.custname}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

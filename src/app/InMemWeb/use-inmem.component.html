@@ -1,0 +1,40 @@
+<h2>Testing In memory web api</h2>
+<button (click)="getbooks()">GetBooks</button>
+<br>
+<!-- {{books|json}} -->
+
+<h2>Books</h2>
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+     <tr *ngFor="let b of books">
+        <td>{{b.id}}</td><td>{{b.name}}</td><td>{{b.price}}</td>
+     </tr>
+    </tbody>
+</table>
+
+<hr>
+<h2>Add new book</h2>
+<br>
+Enter ID : <input type="text" name="bid" #bid>
+<br>
+Enter name : <input type="text" name="bname" #bname>
+<br>
+Enter price : <input type="text" name="bprice" #bprice>
+
+<br>
+<button (click)="addbook(bid.value,bname.value,bprice.value)">Add</button>
+<br>
+
+<hr><h2>Delete book</h2>
+<br>
+Enter ID : <input type="text" name="bid1" #bid1>
+<br>
+<button (click)="delbook(bid1.value)">Delete</button>
+{{msg}}
+
+

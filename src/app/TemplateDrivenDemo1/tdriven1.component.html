@@ -1,0 +1,16 @@
+<form #custform="ngForm" (ngSubmit)="show(custform.value)">
+Custid: <input name="custid"  ngModel #custid>
+<br><br>
+Custname: <input name="custname" ngModel  #custname>
+<br><br>
+Phone: <input name="phone" ngModel  #phone>
+<br><br>
+<input type="submit" value="OK">
+</form>
+
+
+{{fvalue|json}}
+<br>
+Phone : {{phno}}
+<br>
+Name: {{nm}}

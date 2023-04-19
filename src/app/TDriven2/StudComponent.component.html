@@ -1,0 +1,14 @@
+<form   #sform="ngForm" (ngSubmit) ="saveStud(sform.value)" >
+Rollno : <input type="text" name="rollno"  [(ngModel)] ="stud.rollno">
+<br>
+
+Name : <input type="text" name="sname" [(ngModel)] ="stud.sname">
+<br>
+
+Marks : <input type="text" name="marks" [(ngModel)] ="stud.marks">
+<br>
+
+<input type="submit" >
+</form>
+
+{{stud|json}}

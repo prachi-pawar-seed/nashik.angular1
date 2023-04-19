@@ -1,0 +1,89 @@
+<ul *ngFor="let emp of employees" [ngSwitch]="emp.dept">
+    <li *ngSwitchCase="'Admin'" class="mypurple">{{emp.name}} :   {{emp.dept}}</li>
+    <li *ngSwitchCase="'Sales'" class="mygreen">{{emp.name}} :   {{emp.dept}}</li>
+    <li *ngSwitchDefault class="myred">{{emp.name}} :   {{emp.dept}}</li>
+</ul>
+
+
+<!-- <ul *ngFor='let emp of employees' [ngSwitch] ='emp.dept'>
+    <li  *ngSwitchCase="'Admin'" class="myred">{{emp.code}}   {{emp.name}}    {{emp.dept}}</li>
+    <li  *ngSwitchCase="'Accounts'" class="mygreen">{{emp.code}}   {{emp.name}}    {{emp.dept}}</li>
+    <li  *ngSwitchCase="'Sales'" class="myblue">{{emp.code}}   {{emp.name}}    {{emp.dept}}</li>
+    <li  *ngSwitchDefault class="mypurple">{{emp.code}}   {{emp.name}}    {{emp.dept}}</li>
+
+</ul> -->
+
+<!-- 
+<ul *ngFor="let emp of employees;" [ngSwitch]='emp.dept' >
+    <li *ngSwitchCase="'Admin'" class="myred">{{emp.code}} {{emp.name}} {{emp.dept}}</li> 
+    <li *ngSwitchCase="'Sales'" class="myblue">{{emp.code}} {{emp.name}} {{emp.dept}}</li> 
+    <li *ngSwitchCase="'Accounts'" class="mypurple">{{emp.code}} {{emp.name}} {{emp.dept}}</li> 
+    <li *ngSwitchDefault class="mygreen">{{emp.code}} {{emp.name}} {{emp.dept}}</li> 
+
+</ul>
+ -->
+
+
+<!-- <ul  *ngFor = "let emp of employees"  [ngSwitch] = "emp.dept">
+<li *ngSwitchCase ="'Sales'"  class="myred">{{emp.name}}  :  {{emp.dept}}</li>
+<li *ngSwitchCase ="'Admin'"  class="mygreen">{{emp.name}}  :  {{emp.dept}}</li>
+
+<li *ngSwitchDefault class ="mypurple" >{{emp.name}}</li>
+</ul> -->
+
+
+<!-- <ul *ngFor = "let emp of employees" 
+[ngSwitch] = "emp.dept">
+
+<li *ngSwitchCase  = "'Admin'" class="myred"> {{emp.name}}  :  {{emp.dept}}</li>
+<li *ngSwitchCase = "'Sales'" class="mypurple"> {{emp.name}}  :  {{emp.dept}}</li>
+<li *ngSwitchCase = "'Purchase'" class="myblue"> {{emp.name}}  :  {{emp.dept}}</li>
+<li *ngSwitchDefault class="mygreen">{{emp.name}}  :  {{emp.dept}}</li>
+
+</ul>
+
+<hr>
+
+<ul *ngFor = "let emp of employees" >
+    
+<li class="myred">{{emp.name}} {{emp.dept}}</li>
+
+</ul> -->
+
+
+<!-- <table  >
+    <tbody *ngFor='let emp of employees; let i=index'>
+     
+        <tr *ngIf="emp.salary <5000" [className]="'myred'" >
+            
+        <td >{{i+1}}</td>
+        <td >{{i+1}}</td>
+        <td>{{emp.code}}</td>
+        <td>{{emp.name}}</td>
+        <td  >{{emp.salary}}</td>
+        <td   >{{emp.salary}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.dob}}</td>
+        
+        
+    </tr>
+
+    <tr *ngIf="emp.salary > 5000" >
+            
+            <td >{{i+1}}</td>
+            <td >{{i+1}}</td>
+            <td>{{emp.code}}</td>
+            <td>{{emp.name}}</td>
+            <td  >{{emp.salary}}</td>
+            <td   >{{emp.salary}}</td>
+            <td>{{emp.salary}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.dob}}</td>
+            
+            
+        </tr>
+
+
+    </tbody>
+</table> -->

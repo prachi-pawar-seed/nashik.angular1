@@ -1,0 +1,21 @@
+<h2>Data binding </h2>
+
+Message is : {{msg}}
+<br>
+number is : {{num}}
+<br>
+
+Message : <input type="text" [value]="msg">
+<br><br>
+<button (click)="changemsg()">Change message</button>
+
+<br>
+
+Enter your name : <input type="text" #nm >
+<br>
+Enter your age : <input type="text" #age >
+<br>
+
+<button (click)="greetme(nm.value,age.value)">Greet</button>
+<br>
+{{greetmsg}}

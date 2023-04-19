@@ -1,0 +1,50 @@
+<!-- First number: <input type="text" [(ngModel)]="num1">
+<br>
+ {{num1}}
+Second number: <input type="text" [(ngModel)]="num2">
+<br>
+ {{num2}}
+ <br>
+<button (click)="add()">Add</button>
+<br>
+{{res}}
+
+<hr>
+
+First number: <input type="text" #t1>
+<br>
+
+Second number: <input type="text" #t2>
+<br>
+
+ <br>
+<button (click)="add1(t1.value,t2.value)">Add</button>
+<br>
+{{res1}} -->
+
+<hr>
+
+Name: <input type="text" #nm>
+<br>
+Gender:  Male <input type="radio" name="gender" value="male" #rmale>
+<br>
+Female <input type="radio" name="gender" value="female" #rfemale>
+<br>
+{{op}}
+
+<hr>
+
+Age: <input type="text" #tage>
+<br>
+<button (click)="check(tage.value)" >Check</button>
+<br>
+{{ans}}
+<hr>
+
+Pen: <input type="checkbox" value="10" #pen (change)="calculate(pen.checked,pen.value)" >
+<br>
+Pencil: <input type="checkbox" value="2" #pencil (change)="calculate(pencil.checked,pencil.value)">
+<br>
+Sharpner: <input type="checkbox" value="5" #sharpner (change)="calculate(sharpner.checked,sharpner.value)">
+<br>
+{{total}}

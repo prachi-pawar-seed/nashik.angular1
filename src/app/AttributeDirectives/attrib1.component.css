@@ -1,0 +1,35 @@
+.myblue
+{
+    color:blue;
+}
+
+.myred
+{
+    color:red;
+
+}
+
+.mybold
+{
+    font-weight: bold;
+}
+
+.show-class
+{
+visibility: visible;
+
+}
+
+.hide-class
+{
+visibility: hidden;
+
+}
+
+
+.style1
+{
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}

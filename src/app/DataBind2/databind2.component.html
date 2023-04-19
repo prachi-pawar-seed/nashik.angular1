@@ -1,0 +1,20 @@
+<h2>Databind2</h2>
+Message: <input type="text"  [ngModel]="msg">
+
+<hr>
+
+<!-- import FormsModule inorder to use ngModel -->
+Message 1 :  <input [ngModel]="msg1">
+<br>
+{{msg1}}
+
+<br>
+Message 2 :  <input [value]="msg2">
+<br>
+{{msg2}}
+
+
+<br>
+Message 3 : <input [(ngModel)]="msg3">
+<br>
+{{msg3}}

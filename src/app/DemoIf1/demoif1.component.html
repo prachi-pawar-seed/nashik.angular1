@@ -1,0 +1,53 @@
+<h1>Demo of if</h1>
+
+<div *ngIf="flag">
+    <h2>Hello dear friends </h2>
+</div>
+
+<div>
+    <h3>
+    Just another div
+</h3>
+</div>
+<hr>
+
+
+<h2>Product info</h2>
+
+<div *ngIf="status; else elblock">
+    {{p1.prodid}} {{p1.prodname}} {{p1.price}}
+</div>
+
+
+<ng-template #elblock>
+    <div>
+    No product info available!
+</div>
+</ng-template>
+
+<hr>
+
+<div *ngIf="estatus;then block1 else block2"></div>
+
+<ng-template #block1>
+    <h2>Student details</h2>
+    <table border=1 width="400">
+        <thead>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Index</th>
+            <th>Isfirst</th>
+            <th>Iseven</th>
+            <th>IsOdd</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stud of students;let i=index;let f=first;let e=even;let o=odd">
+                <td>{{stud.roll}}</td><td>{{stud.sname}}</td><td>{{i}}</td><td>{{f}}</td><td>{{e}}</td><td>{{o}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
+
+<ng-template #block2>
+    <h2>Two</h2>
+</ng-template>

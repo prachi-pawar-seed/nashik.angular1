@@ -1,0 +1,21 @@
+<form #custform="ngForm" (ngSubmit)="show(custform.value)">
+    Custid: <input type="text" name="custid" [ngModel]  #custid="ngModel" required>
+    <div class="notvalid" *ngIf="custid ?.invalid && (custid ?. touched || custid?.dirty)">
+      Customer ID cannot be blank
+
+    </div>
+    <br><br>
+    Custname: <input name="custname" [ngModel]   #custname="ngModel" required minlength="6">
+    
+      <div class="notvalid" *ngIf="custname?.invalid && (custname?.dirty || custname?.touched)">
+        Custname cannot be blank and must be atleast 6 chars long!
+    </div>
+
+    
+    <br><br>
+    Phone: <input name="phone" [ngModel]  #phone="ngModel">
+    <br><br>
+    <input type="submit" value="OK">
+    </form>
+
+    {{fvalue|json}}

@@ -1,0 +1,34 @@
+<!--Property syntax for style-->
+<h2 [style.color]="'brown'">This text is brown</h2>
+ <div [style.color] = "'orange'">This text is orange</div>
+
+<br> 
+
+<!--Use of component variables-->
+<div [ngStyle]="{'color':color,'font-size':size}">{{svar}}</div>
+
+<br>
+<div [ngStyle] = "{'color' : color ,'font-size' : size+'px'}">{{svar}}</div>
+
+<br> 
+
+<!--Use style from .css file-->
+<div [className]="'myblue'">This is blue</div>
+
+<br>
+<!--Array of classes-->
+ <div [ngClass]="['mybold','myred']"> Array of classes</div>
+
+<br> 
+<!--String of classes-->
+<div [ngClass]="'mybold myred'"> String of classes</div>
+
+<br>
+<!--Object of classes-->
+
+<div [ngClass]="{'myred':true,'hide-class':false}">Object of classes</div>
+<br>
+
+
+<div [ngClass]="'show-class'">Hello there</div>
+

@@ -1,0 +1,23 @@
+<h2>Model Driven or Reactive form</h2>
+
+<form [formGroup]="SignIn">
+    Username: <input formControlName="username">
+    <br>
+    Password:<input formControlName="password" type="password">
+    <br>
+    <div formGroupName="address">
+    Street:<input formControlName="street">
+    <br>
+    City:<input formControlName="city">
+    <br>
+    Country: <select formControlName="country">
+        <option *ngFor="let country of countries" [value]="country"
+        >{{country}}</option>
+      
+
+    </select>
+</div>
+    <br>
+    <button>OK</button>
+
+</form>

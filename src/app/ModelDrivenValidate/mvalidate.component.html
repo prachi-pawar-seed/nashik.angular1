@@ -1,0 +1,17 @@
+<form [formGroup]="SignIn" (ngSubmit)="logform(SignIn.value)">
+    Email: <input formControlName="email">
+    <div *ngIf="SignIn.get('email')?.hasError('required') &&SignIn.get('email')?.touched">Email cannot be blank and must be atleast 4 chars long</div>
+    <br><br>
+    Password: <input type="password" formControlName="pwd">
+    <br><br>
+    <div formGroupName="address">
+        Street: <input formControlName="street">
+        <br><br>
+        City: <input formControlName="city">
+    
+    </div>
+    <button>OK</button>
+    
+    </form>
+    
+    {{SignIn|json}}

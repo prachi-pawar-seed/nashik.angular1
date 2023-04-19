@@ -1,0 +1,44 @@
+<button (click)="clicked()">Click me</button>
+<br>
+{{msg}}
+
+<br>
+
+First: <input (change)="showradio(rone.value)" type="radio" name="rtype" value="First" #rone>
+<br>
+Second:<input (change)="showradio(rtwo.value)" type="radio" name="rtype" value="Second" #rtwo>
+<br>
+
+<!-- 
+Fresher : <input (change)="display(rfresher.value)"  #rfresher type="radio" value="Fresher" name="emptype">
+<br>
+Professional : <input (change)="display(rprof.value)" #rprof type="radio" value="Professional" name="emptype">
+<br>
+{{etype}} -->
+
+<hr>
+First: <input type="checkbox">
+<br>
+Second: <input type="checkbox">
+
+<hr>
+
+First number: <input type="text"  #num1>
+<br>
+Second number: <input type="text"  #num2>
+<br>
+<button (click)="add(num1.value,num2.value)">Add</button>
+{{res}}
+
+<hr>
+
+<select #courses (change)="show(courses.value)">
+    <option value="C">C</option>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+</select>
+
+<hr>
+
+<input type="text" [value]="msg1"  (input) = "changemsg1($event)">
+{{msg1}}
